@@ -127,7 +127,7 @@ def GraphCreator(data):
 
 
     CSW14 = GoldAndCsIn14['CSW14']
-    print(CSW14)
+    #print(CSW14)
     classes = ['Stats1', 'Stats2', 'Stats3', 'Stats4', 'Stats5', 'Stats6', 'Stats7', 'Stats8', 'Stats9', 'Stats10']
     WinTeam = []
     LoseTeam = []
@@ -174,5 +174,5 @@ def GraphCreator(data):
     Antosss = Antosss.resize((250, 55))
     image.paste(Antosss, (470, 543), Antosss)
 
-    image.show()
-    image.save('./Image/Win.png')
+    # image.show()
+    image.save('./Image/PostGameGraph.png')

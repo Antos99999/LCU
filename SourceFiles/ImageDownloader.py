@@ -3,7 +3,7 @@ import requests
 
 def ImageDownload(champList):
     #print("Test")
-    os.makedirs("../ChampionsImg", exist_ok=True)
+    os.makedirs("./ChampionsImg", exist_ok=True)
     DownloadedChamipon = []
     championsPath = 'ChampionsImg/'
     ItemsInPath = os.listdir(championsPath)

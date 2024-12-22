@@ -147,8 +147,8 @@ async def match_history(connection):
     return result, stats_instances
 
 async def GraphCreate(connection):
-    os.makedirs("../Graphs", exist_ok=True)
-    os.makedirs("../Image", exist_ok=True)
+    os.makedirs("./Graphs", exist_ok=True)
+    os.makedirs("./Image", exist_ok=True)
     global ID
 
     GoldW14 = []
@@ -368,6 +368,7 @@ def main():
             }
 
             GraphCreator(DataToFinallGraph)
+            sg.popup("Graphic create! To find it go to Image folder")
 
         connector.start()
     except:
