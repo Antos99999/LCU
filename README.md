@@ -19,5 +19,5 @@ I recommended to put .exe file in separeted folder (for example on Desktop), bec
 
 ## Authors
 
-- [@Antos99999](https://www.github.com/Antos9999)
+- [@Antos99999](https://www.github.com/Antos99999)
 
