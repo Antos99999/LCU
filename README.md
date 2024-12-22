@@ -8,7 +8,7 @@ This simple app use LCU to collect and visual data from game
 
 To correct work you need to have open League Client in which you have the match you want to visualize in your match history
 1. Install latest [release](https://github.com/Antos99999/LCU/releases/latest)
-2. Download folder (with fils) [ImageToUse](https://github.com/Antos99999/LCU/tree/master/ImageToUse)
+2. Download folder (with fils) [ImageToUse](https://github.com/Antos99999/LCU/tree/master/ImageToUse) AND [Fonts](https://github.com/Antos99999/LCU/tree/master/Fonts)
 3. In first input put your match ID (only number)
 4. In secound input put winner team tag (max 8 characters)
 5. Click button "Save ID"
