@@ -36,7 +36,7 @@ If major changes occur in the game (such as adding a new champion, adding a new 
 
 This project is used by:
 
-- [Polski Hub Esportowy](https://x.com/PLHubEsportowy) for use [EDU Esports Uczelnie](https://x.com/edu_esports)
+- [Polski Hub Esportowy](https://x.com/PLHubEsportowy) in [EDU Esports Uczelnie](https://x.com/edu_esports)
 - [Whiteers Cup](https://x.com/WhiteersCup)
 
 
