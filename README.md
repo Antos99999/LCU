@@ -35,7 +35,7 @@ If major changes occur in the game (such as adding a new champion, adding a new 
 ## Features
 
 - Custome order of player in damage graph
-- Improved error handling
+- Improved error and exceptions handling
 
 ## Used By
 
