@@ -1,4 +1,5 @@
-import matplotlib.pyplot as plt
+import os
+import sys
 from PIL import Image, ImageDraw, ImageFont
 
 def GraphCreator(data):
@@ -8,18 +9,22 @@ def GraphCreator(data):
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype('./Fonts/TT Octosquares Trial Bold.ttf',30)
     fontSmall = ImageFont.truetype('./Fonts/TT Octosquares Trial Bold.ttf', 25)
+    fontSmaller = ImageFont.truetype('./Fonts/TT Octosquares Trial Bold.ttf', 15)
 
     Classes = data['statsClasses'] #player class
     MainData = data['match_stats'] #Gold,Kills,Deaths,Assists,Dmg,IdPlayersInTeam
     Objectives = data['dragons']
     GoldAndCsIn14 = data['DataW14']
-    tag = data['tag']
+    matchs = data['match']
 
     #print(Classes)
     #print(MainData)
     #print(Objectives)
     #print(GoldAndCsIn14)
     #print(tag)
+
+    print(matchs)
+
 
     BackGround = Image.open('./ImageToUse/Win.png').convert('RGBA')
     image.paste(BackGround, (-5, 25), BackGround)
@@ -36,7 +41,7 @@ def GraphCreator(data):
     x2, y2 = 420, 110
 
     # Wymiary tekstu
-    bbox  = draw.textbbox((0, 0), "Winner Team: " + tag, font=font)
+    bbox  = draw.textbbox((0, 0), str(matchs['BlueTag'] + " " + matchs['BlueScore'] + " - " + matchs['RedScore'] + " " + matchs['RedTag']), font=font)
     text_width = bbox [2] - bbox [0]  # Szerokość tekstu
     text_height = bbox[3] - bbox[1]
 
@@ -48,7 +53,7 @@ def GraphCreator(data):
     x = x1 + (rect_width - text_width) // 2
     y = y1 + (rect_height - text_height) // 2
 
-    draw.text((x, y+17), "Winner Team: " + tag, fill='white', font=font, align='center')
+    draw.text((x+7, y+17), str(matchs['BlueTag'] + " " + matchs['BlueScore'] + " - " + matchs['RedScore'] + " " + matchs['RedTag']), fill='white', font=font, align='center')
 
     RedGold = MainData['RedGold']
     BlueGold = MainData['BlueGold']
@@ -150,13 +155,13 @@ def GraphCreator(data):
 
     # Drawing Avarage cs in 14 Text
     draw.text((150, 500), "Avg. CS@14", fill='white', font=fontSmall, align='center')
-    draw.text((25, 500), str(WinCsIn14/5), fill='white', font=fontSmall, align='center')
+    draw.text((25, 505), str(WinCsIn14/5), fill='white', font=fontSmaller, align='center')
 
     text_bbox = draw.textbbox((0, 0), str(RedGold), font=font)
     text_width = text_bbox[2] - text_bbox[0]  # Szerokość tekstu
     text_x_position = 485 - text_width  # Dopasowanie do prawej
 
-    draw.text((text_x_position, 500), str(LoseCsIn14/5), fill='white', font=fontSmall, align='center')
+    draw.text((text_x_position+30, 505), str(LoseCsIn14/5), fill='white', font=fontSmaller, align='center')
 
 
     #Paste EDU logo

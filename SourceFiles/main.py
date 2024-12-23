@@ -1,14 +1,12 @@
-import os
-
 from lcu_driver import Connector
+import os
+from os import path
+import sys
+from DataFromTimeline import match_timeline
 import PySimpleGUI as sg
+from dmgGraph import DMGGraph
 import matplotlib.pyplot as plt
-import numpy as np
-
-from DataFromTimeline import *
-from GUI import *
-from dmgGraph import *
-from FinallGraphCreator import *
+from FinallGraphCreator import GraphCreator
 
 connector = Connector()
 
@@ -22,8 +20,6 @@ class Stats:
         self.assists = assists
         self.champ = champ
         self.team = team
-
-
 
 async def match_history(connection):
     RedGold = 0
@@ -149,6 +145,7 @@ async def match_history(connection):
 async def GraphCreate(connection):
     os.makedirs("./Graphs", exist_ok=True)
     os.makedirs("./Image", exist_ok=True)
+    os.makedirs("./ChampionsImg", exist_ok=True)
     global ID
 
     GoldW14 = []
@@ -216,9 +213,12 @@ async def GraphCreate(connection):
             y_diff_odd.append(y_diff[i])
             y_diff_add.append(0)
 
+    #print((max(y_diff_add)/500)*500)
+    #print((min(y_diff_odd)/500)*500)
 
-    max_val = np.round(max(y_diff_add)/500)*500
-    min_val = np.round(min(y_diff_odd)/500)*500
+
+    max_val = round(max(y_diff_add)/500)*500
+    min_val = round(min(y_diff_odd)/500)*500
 
     plt.figure(figsize=(10, 6))
 
@@ -253,23 +253,36 @@ async def GraphCreate(connection):
 def GUI():
     layout = [[sg.Text("Enter match ID")],
               [sg.InputText(key='-INPUT-')],
-              [sg.Text("Enter win team tag")],
-              [sg.InputText(key='-INPUT2-')],
-              [sg.Button('Save ID', enable_events=True), sg.Button('Cancel')]]
+              [sg.Text("Enter blue team tag"),sg.Text("                                                  Enter red team tag")],
+              [sg.InputText(key='-INPUT2-'),sg.InputText(key='-INPUT3-')],
+              [sg.Text("Enter blue team score"),sg.Text("                                               Enter red team score")],
+              [sg.InputText(key='-INPUT4-'),sg.InputText(key='-INPUT5-')],
+              [sg.Button('Save', enable_events=True), sg.Button('Cancel')]]
     window = sg.Window('LCU Post Game', layout)
     event, values = window.read()
     if event == sg.WIN_CLOSED or event == 'Cancel':
         window.close()
         raise SystemExit
-    elif event == 'Save ID':
+    elif event == 'Save':
         ID = values['-INPUT-']
-        tag = values['-INPUT2-']
+        BlueTag = values['-INPUT2-']
+        RedTag = values['-INPUT3-']
+        BlueScore = values['-INPUT4-']
+        RedScore = values['-INPUT5-']
         if not ID.isdigit():
             sg.popup('ERROR - Only numbers are allowed')
             window.close()
             exit(1)
+
+    match = {
+        'BlueTag': BlueTag,
+        'RedTag': RedTag,
+        'BlueScore': BlueScore,
+        'RedScore': RedScore
+    }
+
     window.close()
-    return ID, tag
+    return ID, match
 
 async def DragonType(connection,teamBlue,teamRed):
     global ID
@@ -338,13 +351,15 @@ def main():
     # Repeat try except block with valid match ID
     while True:
         try:
-            ID, tag = GUI()
+            ID, matchS = GUI()
             #print(ID)
+            #print(match)
             break
         except SystemExit:
             exit(0)
         except:
             sg.popup('Error - Invalid match ID')
+            exit(0)
 
     try:
         @connector.ready
@@ -364,7 +379,7 @@ def main():
                 'match_stats': match_stats,
                 'dragons': dragons,
                 'DataW14': match_time,
-                'tag': tag
+                'match': matchS
             }
 
             GraphCreator(DataToFinallGraph)

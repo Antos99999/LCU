@@ -1,5 +1,3 @@
-from main import *
-
 def match_timeline(match_timestamp,k):
     GoldKoniec = 0
     Minuty = []

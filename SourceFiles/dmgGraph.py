@@ -1,13 +1,10 @@
-import matplotlib.pyplot as plt
 from PIL import Image, ImageDraw, ImageFont
-import os
-from main import *
+import matplotlib.pyplot as plt
 from DictionaryIdToName import *
 from ImageDownloader import *
+import sys
 
 def DMGGraph(stats):
-    os.makedirs("./Image", exist_ok=True)
-
     width, height = 900, 600
     image = Image.new('RGBA', (width, height), (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
