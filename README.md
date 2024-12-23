@@ -7,7 +7,7 @@ This simple app use LCU to collect and visual data from game
 ## Usage
 
 To correct work you need to have open League Client in which you have the match you want to visualize in your match history
-1. Install [release](https://github.com/Antos99999/LCU/releases) which are created for you (tag should by patchVAppVarsion_league)
+1. Install [release](https://github.com/Antos99999/LCU/releases) which are created for you (tag should by patchVAppVarsion_league) - if you want special release please hit me up
 2. Download folder (with files) [ImageToUse](https://github.com/Antos99999/LCU/tree/master/ImageToUse) AND [Fonts](https://github.com/Antos99999/LCU/tree/master/Fonts) - put them in the same folder where you have .exe file (without them app will not work)
 4. In first input put your match ID (only number)
 5. In secound input put winner team tag (max 8 characters)
