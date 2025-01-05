@@ -30,6 +30,7 @@ If major changes occur in the game (such as adding a new champion, adding a new 
 ## League Tags
 
 - EDU Espotrs Uczelnie -> EDU
+- Rift Legends -> RFT
 
 
 ## Features
@@ -43,6 +44,7 @@ This project is used by:
 
 - [Polski Hub Esportowy](https://x.com/PLHubEsportowy) in [EDU Esports Uczelnie](https://x.com/edu_esports)
 - [Whiteers Cup](https://x.com/WhiteersCup)
+- By [me](https://x.com/antosss_) in [Rift Legends](https://x.com/RiftLegendsPL)
 
 
 
