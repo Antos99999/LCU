@@ -7,7 +7,7 @@ This simple app use LCU to collect and visual data from game
 ## Usage
 
 To correct work you need to have open League Client in which you have the match you want to visualize in your match history
-1. Install [release](https://github.com/Antos99999/LCU/releases) which are created for you (tag should by patchVAppVarsion_UserTag) - if you want special release just for you, please contact me
+1. Install [release](https://github.com/Antos99999/LCU/releases) which are created for you (tag should by patchVAppVarsion_LeagueTag) - if you want special release just for you, please contact me
 2. Download folder (with files) [ImageToUse](https://github.com/Antos99999/LCU/tree/master/ImageToUse) AND [Fonts](https://github.com/Antos99999/LCU/tree/master/Fonts) - put them in the same folder where you have .exe file (without them app will not work)
 4. In first input put your match ID (only number)
 5. In secound input put winner team tag (max 8 characters)
@@ -27,9 +27,10 @@ The match you want to visualize must be either in your game history, or you must
 If major changes occur in the game (such as adding a new champion, adding a new item, new season, removing an item), the application may not function properly. Implementing the appropriate changes should not take much time (a few days at most). If there is no appropriate release, please contact me via Discord (Antos99999)
 
 
-## Users Tags
+## League Tags
 
-- Polski Hub Esportowy -> PHE
+- EDU Espotrs Uczelnie -> EDU
+- Rift Legends -> RFT
 
 
 ## Features
@@ -43,6 +44,7 @@ This project is used by:
 
 - [Polski Hub Esportowy](https://x.com/PLHubEsportowy) in [EDU Esports Uczelnie](https://x.com/edu_esports)
 - [Whiteers Cup](https://x.com/WhiteersCup)
+- By [me](https://x.com/antosss_) in [Rift Legends](https://x.com/RiftLegendsPL)
 
 
 
