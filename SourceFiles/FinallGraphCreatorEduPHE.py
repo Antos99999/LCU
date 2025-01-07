@@ -155,22 +155,21 @@ def GraphCreator(data):
 
     #Paste LEAGUE logo
     #EDU = EDU.resize((120, 33))
-    #image.paste(LEAGUE, (150, 550), LEAGUE)
 
-    LEAGUE = Image.open('./ImageToUse/riftlegends_logo.png').convert('RGBA')
-    LEAGUE = LEAGUE.resize((90, 47))
-    image.paste(LEAGUE, (150, 545), LEAGUE)
+    LEAGUE = Image.open('./ImageToUse/EDU_LOGO.png').convert('RGBA')
+    LEAGUE = LEAGUE.resize((120, 33))
+    image.paste(LEAGUE, (150, 550), LEAGUE)
 
     #Paste CASTER logo
-    #PHE = Image.open('./ImageToUse/PHE_LOGO.png').convert('RGBA')
-    #PHE = PHE.resize((40, 40))
-    #image.paste(PHE, (650, 545), PHE)
+    PHE = Image.open('./ImageToUse/PHE_LOGO.png').convert('RGBA')
+    PHE = PHE.resize((40, 40))
+    image.paste(PHE, (650, 545), PHE)
 
     # Paste Antosss_ logo
     Antosss = Image.open('./ImageToUse/Antosss__White.png').convert('RGBA')
     Antosss = Antosss.resize((180, 40))
-    image.paste(Antosss, (500, 550), Antosss)
-    #image.paste(Antosss, (350, 550), Antosss)
+    #image.paste(Antosss, (500, 550), Antosss)
+    image.paste(Antosss, (350, 550), Antosss)
 
     # image.show()
     image.save('./Image/PostGameGraph.png')
