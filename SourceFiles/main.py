@@ -6,7 +6,7 @@ from DataFromTimeline import match_timeline
 import PySimpleGUI as sg
 from dmgGraph import DMGGraph
 import matplotlib.pyplot as plt
-from FinallGraphCreatorEduPHE import GraphCreator
+from FinallGraphCreatorRiftLegendsPHE import GraphCreator
 
 connector = Connector()
 

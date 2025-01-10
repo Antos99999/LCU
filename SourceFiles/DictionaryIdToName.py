@@ -2,7 +2,7 @@ import requests
 
 def CreateDictionary():
     # URL for the champion data
-    url = 'https://ddragon.leagueoflegends.com/cdn/14.24.1/data/en_US/champion.json'
+    url = 'https://ddragon.leagueoflegends.com/cdn/15.1.1/data/en_US/champion.json'
 
     # Fetch data from the API
     response = requests.get(url)

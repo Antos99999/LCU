@@ -167,7 +167,7 @@ def GraphCreator(data):
 
     # Paste Antosss_ logo
     Antosss = Image.open('./ImageToUse/Antosss__White.png').convert('RGBA')
-    Antosss = Antosss.resize((180, 40))
+    Antosss = Antosss.resize((120, 50))
     #image.paste(Antosss, (500, 550), Antosss)
     image.paste(Antosss, (350, 550), Antosss)
 
