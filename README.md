@@ -22,7 +22,7 @@ The app works on patches backwards (but the match still needs to be in the match
 App support both custome and official games (ranked, games with tournametn code). If the game mode is custom, it is recommended that players arrange themselves in the lobby from top to bot - otherwise the damage dealt graph will not be displayed correctly (the graph will still be correct, but the application is currently unable to set a custom display order players, so it is possible that the order of players will be different than top to bot)
 
 **IMPORTANT**\
-The match you want to visualize must be either in your game history, or you must have the post-match graphics running in the client (the one that is displayed after the end of the game)
+The match you want to visualize must be either in your game history, or you must have the post-match graphics running in the client (the one that is displayed after the end of the game) AND you must be a **participant** of game!
 
 If major changes occur in the game (such as adding a new champion, adding a new item, new season, removing an item), the application may not function properly. Implementing the appropriate changes should not take much time (a few days at most). If there is no appropriate release, please contact me via Discord (Antos99999)
 
