@@ -26,27 +26,10 @@ The match you want to visualize must be either in your game history, or you must
 
 If major changes occur in the game (such as adding a new champion, adding a new item, new season, removing an item), the application may not function properly. Implementing the appropriate changes should not take much time (a few days at most). If there is no appropriate release, please contact me via Discord (Antos99999)
 
-
-## League Tags
-
-- EDU Espotrs Uczelnie -> EDU
-- Rift Legends -> RFT
-
-
 ## Features
 
 - Custome order of player in damage graph
 - Improved error and exceptions handling
-
-## Used By
-
-This project is used by:
-
-- [Polski Hub Esportowy](https://x.com/PLHubEsportowy) in [EDU Esports Uczelnie](https://x.com/edu_esports)
-- [Whiteers Cup](https://x.com/WhiteersCup)
-- By [me](https://x.com/antosss_) in [Rift Legends](https://x.com/RiftLegendsPL)
-
-
 
 
 ## Authors
